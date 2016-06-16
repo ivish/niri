@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Niri" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJe-Ps-aZ6">
+                                <rect key="frame" x="20" y="388" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordPauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hs-cc-zCX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az7-Mg-lzF">
+                                <rect key="frame" x="20" y="455" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUc-zV-Uyw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kT-K5-bnN">
+                                <rect key="frame" x="545" y="388" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugt-cs-3mw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v7-Cs-3hV">
+                                <rect key="frame" x="507" y="455" width="73" height="30"/>
+                                <state key="normal" title="Transcribe"/>
+                                <connections>
+                                    <action selector="transcribeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dwe-rV-JpK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sXg-Q3-NB3">
+                                <rect key="frame" x="20" y="28" width="555" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="kXa-wK-vuD"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0l-Wb-KRY">
+                                <rect key="frame" x="246" y="510" width="108" height="30"/>
+                                <state key="normal" title="Start Streaming"/>
+                                <connections>
+                                    <action selector="startStreaming:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFA-L6-5fd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sXg-Q3-NB3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="67O-MY-WJT"/>
+                            <constraint firstItem="d0l-Wb-KRY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="75L-kv-u1U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d0l-Wb-KRY" secondAttribute="bottom" constant="60" id="9Wj-ya-2Yw"/>
+                            <constraint firstItem="1v7-Cs-3hV" firstAttribute="top" secondItem="9kT-K5-bnN" secondAttribute="bottom" constant="37" id="Rpx-Gl-UHL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sXg-Q3-NB3" secondAttribute="leading" id="TaJ-Tu-ROD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9kT-K5-bnN" secondAttribute="trailing" constant="5" id="UCs-t4-32x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="az7-Mg-lzF" secondAttribute="bottom" constant="115" id="duE-sE-Tqa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="az7-Mg-lzF" secondAttribute="leading" id="eBe-d9-Shi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sXg-Q3-NB3" secondAttribute="trailing" constant="5" id="ufd-Jt-QXW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1v7-Cs-3hV" secondAttribute="bottom" constant="115" id="vUT-Ma-KHl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1v7-Cs-3hV" secondAttribute="trailing" id="wkz-Su-4oF"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="TJe-Ps-aZ6" secondAttribute="leading" id="yfe-ez-dHV"/>
+                            <constraint firstItem="az7-Mg-lzF" firstAttribute="top" secondItem="TJe-Ps-aZ6" secondAttribute="bottom" constant="37" id="ynq-M0-cPT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="9kT-K5-bnN" id="R8A-zh-dQu"/>
+                        <outlet property="recordButton" destination="TJe-Ps-aZ6" id="V0R-0V-0ZD"/>
+                        <outlet property="startStopStreamingDefaultButton" destination="d0l-Wb-KRY" id="yGH-Ma-L77"/>
+                        <outlet property="stopButton" destination="az7-Mg-lzF" id="epf-iY-wvF"/>
+                        <outlet property="transcribeButton" destination="1v7-Cs-3hV" id="05V-5S-kZ8"/>
+                        <outlet property="transcriptionDisplay" destination="sXg-Q3-NB3" id="sxK-zZ-TeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="387"/>
+        </scene>
+    </scenes>
+</document>
